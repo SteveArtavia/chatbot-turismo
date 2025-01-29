@@ -2,7 +2,7 @@ import respuestas from "./respuestas.js";
 
 let pantalla = document.querySelector('.pantalla');
 
-bot(`Hola usuario, dime en que puedo ayudarte?`);
+bot(`Hola usuario, soy tu asistente virtual de tu viaje a Suiza, dime como puedo ayudarte?`);
 
 function mostrarMensajes(mensaje){
 
@@ -19,14 +19,20 @@ function mostrarMensajes(mensaje){
                 let respuesta = respuestas[mensaje[i]].respuestas;
                 let indice = Math.floor(Math.random() * respuesta.length);
                 bot(respuesta[indice]);
+
+                return;
                 
-            }else{
-                let respuesta = respuestas.predeterminadas.respuestas;
-                let indice = Math.floor(Math.random() * respuesta.length);
-                bot(respuesta[indice])
             }
         }
     }, 400);
+
+    // solucionar como dar una respuesta predeterminada... else{
+    //     let respuesta = respuestas.predeterminadas.respuestas;
+    //     let indice = Math.floor(Math.random() * respuesta.length);
+    //     bot(respuesta[indice]);
+        
+    //     return; 
+    // }
 
     pantalla.scrollTop = pantalla.scrollHeight;
 

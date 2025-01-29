@@ -1,3 +1,7 @@
+:root{
+    --color-primario: #db2424;
+}
+
 body{
     font-family: sans-serif;  
 }
@@ -8,7 +12,8 @@ body{
     margin: auto;
     padding: 1em;
     border-radius: 1em;
-    box-shadow: 0 0 10px 0 #e2e2e2;
+    box-shadow: 0 0 10px 0 #cecdcd;
+    border: 1px solid rgb(85, 85, 85);
 }
 .pantalla{
     border: 1px solid grey;
@@ -16,22 +21,32 @@ body{
     height: 80%;
     border-radius: 1em;
     overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: #efefef;
+}
+::-webkit-scrollbar{
+    display: none;
 }
 .mensaje-bot{
     margin: 1em 0;
     padding: 1em;
-    border: 1px solid grey;
     border-radius: 1em;
     text-align: start;
     margin-right: 5em;
+    background-color: #525252;
+    color: white;
+    box-shadow: 0 0 10px 0 #efefef;
 }
 .mensaje-usuario{
     margin: 1em 0;
     padding: 1em;
     border: 1px solid grey;
+    background-color: white;
     border-radius: 1em;
     text-align: end;
     margin-left: 5em;
+    box-shadow: 0 0 10px 0 #efefef;
 }
 .mensaje-container{
     padding: 1em 0;
@@ -43,11 +58,12 @@ input{
     padding: 1em;
     border-radius: 0.5em;
     border: none;
-    background-color: rgb(235, 235, 235);
+    background-color: #efefef;
 }
 .enviar-mensaje{
     border-radius: 0.5em;
     border: none;
-    background-color: rgb(235, 235, 235);
+    background-color: var(--color-primario);
     cursor: pointer;
+    color: white;
 }
