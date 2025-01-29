@@ -1,0 +1,33 @@
+.container{
+    border: 1px solid grey;
+    height: 90vh;
+    width: 50%;
+    margin: auto;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 10px 0 #e2e2e2;
+}
+.pantalla{
+    border: 1px solid grey;
+    padding: 1em;
+    height: 80%;
+    border-radius: 1em;
+}
+.mensaje-container{
+    padding: 1em 0;
+    display: grid;
+    grid-template-columns: 15fr 1fr;
+    gap: 1em;
+}
+input{
+    padding: 1em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: rgb(235, 235, 235);
+}
+.enviar-mensaje{
+    border-radius: 0.5em;
+    border: none;
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+}
