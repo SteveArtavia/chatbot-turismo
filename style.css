@@ -13,6 +13,18 @@
     height: 80%;
     border-radius: 1em;
 }
+.mensaje-bot{
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid grey;
+    border-radius: 1em;
+}
+.mensaje-usuario{
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid grey;
+    border-radius: 1em;
+}
 .mensaje-container{
     padding: 1em 0;
     display: grid;
