@@ -1,3 +1,6 @@
+body{
+    font-family: sans-serif;  
+}
 .container{
     border: 1px solid grey;
     height: 90vh;
@@ -12,18 +15,23 @@
     padding: 1em;
     height: 80%;
     border-radius: 1em;
+    overflow-y: scroll;
 }
 .mensaje-bot{
     margin: 1em 0;
     padding: 1em;
     border: 1px solid grey;
     border-radius: 1em;
+    text-align: start;
+    margin-right: 5em;
 }
 .mensaje-usuario{
     margin: 1em 0;
     padding: 1em;
     border: 1px solid grey;
     border-radius: 1em;
+    text-align: end;
+    margin-left: 5em;
 }
 .mensaje-container{
     padding: 1em 0;

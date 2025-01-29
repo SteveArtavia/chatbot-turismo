@@ -2,7 +2,7 @@ import respuestas from "./respuestas.js";
 
 let pantalla = document.querySelector('.pantalla');
 
-bot(`Hola usuario`);
+bot(`Hola usuario, dime en que puedo ayudarte?`);
 
 function mostrarMensajes(mensaje){
 
@@ -11,11 +11,24 @@ function mostrarMensajes(mensaje){
     mensajeUsuario.innerHTML += mensaje;
     pantalla.appendChild(mensajeUsuario);
 
-    if(respuestas.hasOwnProperty(mensaje)){
-        let respuesta = respuestas[mensaje].respuestas;
-        let indice = Math.floor(Math.random() * respuesta.length);
-        bot(respuesta[indice]);
-    }
+    mensaje = mensaje.split(' ');
+
+    setTimeout(() => {
+        for(let i = 0; i < mensaje.length; i++){
+            if(respuestas.hasOwnProperty(mensaje[i])){
+                let respuesta = respuestas[mensaje[i]].respuestas;
+                let indice = Math.floor(Math.random() * respuesta.length);
+                bot(respuesta[indice]);
+                
+            }else{
+                let respuesta = respuestas.predeterminadas.respuestas;
+                let indice = Math.floor(Math.random() * respuesta.length);
+                bot(respuesta[indice])
+            }
+        }
+    }, 400);
+
+    pantalla.scrollTop = pantalla.scrollHeight;
 
     return;
 }
@@ -25,6 +38,8 @@ function bot(mensaje){
     mensajeBot.classList.add('mensaje-bot');
     mensajeBot.innerHTML += mensaje;
     pantalla.appendChild(mensajeBot);
+
+    pantalla.scrollTop = pantalla.scrollHeight;
 
     return;
 }
